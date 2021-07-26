@@ -9,9 +9,6 @@ require("./services/passport");
 
 const authRoutes = require('./routes/authRoutes');
 
-
-
-
 mongoose.connect(keys.mongoURI,{
    useNewUrlParser: true,
    useCreateIndex: true,

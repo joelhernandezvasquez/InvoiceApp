@@ -7,6 +7,4 @@ module.exports = {
     cookieKey:process.env.COOKIE_KEY
    };
 
-   // dbUser  jya300591
-
-   //mongodb+srv://dbUser:jya300591@cluster0.j1ktg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+ 
