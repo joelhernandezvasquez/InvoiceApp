@@ -9,7 +9,11 @@ const {Schema} = mongoose;  // used ES6 destructuring out of const Schema = mong
  Note: it is the same as Create table in SQL relational database. */
 
 const userSchema = new Schema({
- googleId:String
+ name:String,
+ email:String,
+ password:String,
+ avatar:String,
+ role:String
 });
 
 

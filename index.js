@@ -4,10 +4,18 @@ const mongoose = require('mongoose');
 const cookieSession = require('cookie-session');
 const passport = require("passport");
 const keys = require("./config/keys");
+const flash = require("connect-flash");
+
 require('./models/User');
+require('./models/Invoice');
+require('./models/Customer');
 require("./services/passport");
 
+const dashboardRoute = require('./routes/dashboardRoute');
 const authRoutes = require('./routes/authRoutes');
+const userRoutes = require('./routes/userRoutes');
+const invoiceRoute = require('./routes/invoiceRoute');
+const customerRoute = require('./routes/customerRoute');
 
 mongoose.connect(keys.mongoURI,{
    useNewUrlParser: true,
@@ -15,7 +23,10 @@ mongoose.connect(keys.mongoURI,{
    useUnifiedTopology: true,
 });
 
+
+
 const app = express();
+app.use(express.json({extended:false}));
 
 app.use(
    cookieSession({
@@ -23,10 +34,20 @@ app.use(
       keys:[keys.cookieKey]
    })
 )
+
 app.use(passport.initialize());
 app.use(passport.session());
 
+
+app.use('uploads',express.static('uploads'))
+
+app.use(flash())
+
 authRoutes(app);
+userRoutes(app);
+dashboardRoute(app);
+invoiceRoute(app);
+customerRoute(app);
 
 
 
