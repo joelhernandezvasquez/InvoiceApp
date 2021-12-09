@@ -1,0 +1,197 @@
+@import '../abstracts/variables';
+
+.header-list {
+  padding-top: 6.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  @media(min-width: 767px)
+      {
+        padding-top:7rem;
+      }
+
+  .header-list_routing-info {
+    .routing-name {
+      margin-bottom: 4px;
+      font-size: var(--fs-h3);
+      font-weight: 700;
+      color: $light-black;
+
+      @media(min-width: 767px)
+      {
+        font-size: 2rem;
+      }
+    }
+
+    .count-info {
+      color: $light-gray;
+      font-size: var(--fs-sm-text);
+    }
+  }
+
+  .header-list_btn-containers {
+    display: flex;
+
+    .filter-container {
+      display: flex;
+      align-items: center;
+      margin-right: 1.2rem;
+      position: relative;
+      cursor: pointer;
+
+      label {
+        font-size: var(--fs-sm-text);
+        color: $light-black;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      .dropdown-icon {
+        margin-left: 1rem;
+        color: $light-orange;
+        font-weight: 500;
+        font-size: 12px;
+        transition: transform 0.2s ease-in-out;
+      }
+
+      .rotate.dropdown-icon {
+        transform: rotate(-180deg);
+      }
+
+      .filter-options {
+        display: none;
+        width: 120px;
+        height: 120px;
+        background: $pure-white;
+        box-shadow: 0px 10px 20px rgba(72, 84, 159, 0.25);
+        border-radius: 8px;
+        position: absolute;
+        top: 45px;
+        left: -35px;
+        padding: 1rem;
+
+        .filter-options-items {
+          cursor: pointer;
+
+          .item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.7rem;
+            cursor: pointer;
+
+            label {
+              width: 16px;
+              height: 16px;
+              background: rgba($light-orange, 0.2);
+              border-radius: 2px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              svg {
+                opacity: 0;
+                width: 80%;
+
+                path {
+                  fill: $light-orange;
+                }
+              }
+            }
+
+            .label-name {
+              font-size: 0.75rem;
+              font-weight: 700;
+              color: $light-black;
+              margin-left: 10px;
+            }
+
+            input {
+              position: absolute;
+              opacity: 0;
+            }
+
+            input[type='checkbox']:checked + label {
+              svg {
+                opacity: 1;
+              }
+            }
+          }
+        }
+
+        @media(min-width: 767px)
+        {
+          width:150px;
+          left: -7px;
+         
+        }
+      }
+      .show.filter-options{
+          display:block;
+      }
+
+      @media(min-width:767px)
+      {
+        margin-right: 2rem;
+      }
+    }
+
+    .create-btn {
+      text-decoration: none;
+      color: $light-black;
+      transition: all 0.3s;
+
+      .btn-container {
+        display: flex;
+        align-items: center;
+        background: $light-orange;
+        border-radius: 1.5rem;
+        padding: 0.3rem 0.6rem;
+
+        .plus-sign-container {
+          width: 2rem;
+          height: 2rem;
+          border-radius: 50%;
+          background: $pure-white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 0.5rem;
+
+          #plus-sign {
+            color: $light-orange;
+            font-size: 0.875rem;
+
+            :hover {
+              background: none;
+            }
+          }
+
+          :hover {
+            background: $pure-white;
+          }
+        }
+
+        span {
+          color: $pure-white;
+          font-size: 0.75rem;
+          font-weight: 500;
+        }
+
+        @media(min-width: 767px)
+        {
+          padding: 0.5rem 0.6rem;
+        }
+      }
+
+      :hover {
+        background: rgba($light-orange, 0.8);
+
+        span {
+          background: none;
+        }
+      }
+    }
+  }
+}

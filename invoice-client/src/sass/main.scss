@@ -1,0 +1,37 @@
+
+@import 'base/typography';
+@import 'abstracts/placeholders';
+@import 'base/reset';
+@import 'layout/home';
+@import 'layout/dashboard';
+@import 'layout/authentication';
+@import 'layout/error_account';
+@import 'utilities/errors';
+@import 'layout/user_profile';
+@import 'layout/user_account';
+@import 'layout/invoices';
+@import 'layout/customers';
+@import 'layout/view_customer';
+@import 'layout/create_model';
+
+
+
+body{
+  position:relative;
+
+}
+
+:is(h1,h2,h3,a,button){
+    font-family:$primary-font;
+}
+
+:is(p,span,label,input){
+  font-family:$secondary-font;
+}
+
+.overlay{
+  // width:50%;
+  // height:100vh;
+  // background:black;
+  // margin:0;
+}

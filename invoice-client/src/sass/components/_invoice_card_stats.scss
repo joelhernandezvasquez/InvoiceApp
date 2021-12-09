@@ -1,0 +1,66 @@
+
+.invoice-stats{
+    background-color: $pure-white;
+    border-radius: 20px;
+    padding:var(--inner-padding);
+    margin:20px 0;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    position: relative;
+    height: 185px;
+
+    @media(min-width:600px)
+    {
+        height:220px;
+    }
+
+    @media(min-width:700px)
+    {
+        height:185px;
+    }
+    
+   
+}
+
+.statistics{ 
+  grid-column: 1/2;
+  height:60px;
+  
+  .numberStats{
+   font-weight: 700;
+   color:$light-black;
+   letter-spacing: 2px;
+   font-size: 28px;
+  }
+  .type-stats{
+      display: inline-block;
+    color:$light-gray;
+      font-size: 1rem;
+      font-weight: 400;
+      margin-top: 5px;
+  }
+
+}
+.invoice-graphic-container{
+    height: 60px;
+    grid-template-columns: 2/3;
+    display:flex;
+    justify-content: flex-end;
+    
+}
+.graphic-bar-container{
+    position:absolute;
+    width:100%;
+    height:80px;
+    bottom:0px;
+    img{
+        width:100%;
+        max-height: 120px;
+    }
+
+    @media(min-width: 1280px)
+    {
+        bottom:-15px;
+    }
+   
+}

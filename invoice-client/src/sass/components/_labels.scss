@@ -1,0 +1,8 @@
+@import '../abstracts/colors';
+@import '../abstracts/variables';
+
+.primary-label{
+    color:$pure-white;
+    font-size: var(--fs-btn);
+    text-transform: capitalize;
+}

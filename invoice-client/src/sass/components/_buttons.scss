@@ -1,0 +1,165 @@
+
+@import '../abstracts/colors';
+@import '../abstracts/variables';
+@import '../base/typography';
+
+.btn{
+    padding:0.8rem 2rem;
+    border-radius: 40px;
+    border:none;
+    cursor: pointer;
+    
+    @media(min-width: 1200px)
+    {
+      padding:0.8rem 2.5rem;
+    }
+}
+.btn-default{
+  background:none;
+  color: $pure-white;
+  font-size: var(--fs-btn);
+    font-family: $secondary-font;
+    font-weight: 500;
+   border:1px solid $light-orange;
+   transition: all 0.2s ease-in-out;
+
+   &:hover{
+    background:$light-orange;
+   
+   }
+}
+
+.btn-primary{
+    background:$light-orange;
+    color:$pure-white;
+    font-size: var(--fs-btn);
+    font-family: $secondary-font;
+    font-weight: 500;
+    transition:all 0.3s ease-out;
+
+    &:hover{
+      box-shadow: 0px 10px 60px rgba(254, 108, 77, 0.4);
+    }
+}
+
+
+.google-btn{
+  background:#333270;
+  padding:1rem 0;
+  border:none;
+  border-radius: 50px;
+  border:1px solid $pure-white;
+  cursor: pointer;
+  @extend %flex-center;
+  transition:all 0.2s;
+  
+  
+  .google-icon{
+    width: 16px;
+    height:16px;
+
+    @media(min-width:767px)
+    {
+      width: 20px;
+      height:20px;
+    }
+  }
+  .btn-text{
+    color:$pure-white;
+    font-size:var(--fs-btn);
+    margin:0 1rem;
+    
+  }
+  &:hover{
+    background:rgba(#333270,0.8);
+  }
+}
+
+.auth-btn{
+  border-radius:50px;
+  text-transform: capitalize;
+  font-size: var(--fs-btn);
+  padding:1rem 0
+}
+
+.btn-create-invoice{
+  display:flex;
+  align-items: center;
+  padding:0.5rem 1.3rem;
+  border:1px solid $light-orange;
+   border-radius: 20px;
+   cursor: pointer;
+     color:$light-orange;
+     font-weight: 500;
+     transition: all 0.2s ease-in-out;
+    
+     #plus-invoice-icon{
+       font-size: 1.3rem;
+     }
+     span{
+       display: inline-block;
+       margin-left:10px;
+       font-size: var(--fs-sm-text);
+     }
+
+     &:hover{
+       color:$pure-white;
+       background:$light-orange;
+       border:1px solid $pure-white;
+     }
+   
+}
+.action-btn{
+  padding:12px 32px;
+  border-radius: 40px;
+  border:none;
+  cursor: pointer;
+  font-family: $secondary-font;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+.btn-delete{
+  
+  background:hsl(0, 80%, 53%);
+  color:$pure-white;
+  transition:all 0.2s ease-in-out;
+  &:hover{
+    background:hsl(0, 80%, 63%);
+  }
+}
+
+.btn-edit{
+ 
+  background:hsl(11, 99%, 65%);
+  color:$pure-white;
+  transition:all 0.2s ease-in-out;
+  &:hover{
+    background:hsl(11, 99%, 75%);
+  }
+}
+
+.btn-create-item{
+  width: 90%;
+  padding:14px 24px;
+  margin-top:16px;
+  background:hsl(11, 99%, 65%);
+  color:$pure-white;
+  transition:all 0.2s ease-in-out;
+  border-radius:24px;
+  font-weight: 400;
+  font-family: $secondary-font;
+  font-size: 0.875rem;
+ 
+  &:hover{
+    background:hsl(11, 99%, 75%);
+  }
+
+  @media(min-width: 767px)
+  {
+    width:400px;
+  }
+}
+
+
+
+

@@ -1,0 +1,276 @@
+@import '../abstracts/colors';
+
+.modal {
+  position: absolute;
+  z-index: 20;
+  height: 100%;
+  top: 0;
+}
+
+.nav-bar-modal {
+  width: 100%;
+  height: 0;
+  background: $dark-blue-bg;
+  top: 60px;
+  transition: all 0.3s ease-in-out;
+}
+
+.active.nav-bar-modal {
+  height: 100%;
+}
+
+.welcome-message {
+  @extend %message-container;
+
+  .welcome-card {
+    background: $pure-white;
+    width: 340px;
+    height: 300px;
+    border-radius: 10px;
+    @extend %flex-column-spread-around;
+    padding: 1rem;
+
+    h1 {
+      font-size: 1.5rem;
+      color: $light-orange;
+    }
+
+    img {
+      width: 70px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    button {
+      width: 100%;
+    }
+
+    @media (min-width: 767px) {
+      width: 500px;
+      padding: 1.5rem;
+      justify-content: space-between;
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      img {
+        width: 90px;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+.user-failed-message {
+  @extend %message-container;
+
+  .user-failed-card {
+    background: $pure-white;
+    width: 300px;
+    height: 220px;
+    border-radius: 10px;
+    @extend %flex-column-spread-around;
+    color: #d90429;
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+
+      font-weight: bold;
+    }
+
+    button {
+      width: 100%;
+      background-color: #d90429;
+    }
+
+    @media (min-width: 767px) {
+      width: 500px;
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+.create-customer-modal{
+  @extend %delete-message;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+
+  @media(min-width: 767px)
+{
+  align-items: flex-start;
+}
+
+}
+
+.delete-user-modal {
+  @extend %delete-message;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .dialog {
+    background: $pure-white;
+    width: 327px;
+    height: 220px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+
+    padding: 2rem;
+
+    .dialog-title {
+      font-size: 1.3rem;
+      color: $light-black;
+    }
+
+    .dialog-description {
+      font-size: 0.875rem;
+      font-family: $secondary-font;
+      font-weight: 400;
+      color: $light-black;
+      margin: 0.5rem 0 1.5rem 0;
+    }
+
+    .dialog-btn-container {
+      display: flex;
+      justify-content: flex-end;
+
+      button {
+        border: none;
+        outline: none;
+        padding: 0.5rem 1.2rem;
+        font-size: 0.875rem;
+        margin: 0 0.5rem;
+        border-radius: 10px;
+        cursor: pointer;
+        font-family: $secondary-font;
+        font-weight: 500;
+      }
+
+      #dialog-delete-btn {
+        background: #ff0000;
+        color: $pure-white;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          background: rgba(#ff0000, 0.5);
+        }
+      }
+
+      #dialog-cancel-btn {
+        background: #f3f4f4;
+        color: $light-black;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          background: $light-white;
+        }
+      }
+    }
+
+    @media (min-width: 767px) {
+      width: 480px;
+      height: 229px;
+      transform: translateY(200px);
+
+      .dialog-title {
+        font-size: 1.5rem;
+      }
+
+      .dialog-description {
+        font-size: 1rem;
+      }
+
+      .dialog-btn-container {
+        button {
+          font-size: 1rem;
+          padding: 0.6rem 1.4rem;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 767px) {
+    align-items: flex-start;
+  }
+}
+
+.account-delete-confirmation{
+  @extend %delete-message;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .card{
+    background: $pure-white;
+    width: 327px;
+    height: 120px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+    padding: 2rem;
+    display:flex;
+   
+
+    .info{
+      font-size: 1rem;
+      color:$light-black;
+      margin-left: 10px;
+    
+    }
+    #icon-success{
+      font-size: 2rem;
+      color:#008000;
+      
+    
+    }
+
+    @media(min-width: 767px)
+    {
+      width:400px;
+      transform: translateY(200px);
+    justify-content: center;
+
+    }
+   
+}
+@media(min-width: 767px)
+{
+  align-items: flex-start;
+}
+}
+
+.modal-create-form{
+  position: absolute;
+  top:0;
+  left:0;
+  background:rgba(0,0,0,0.7);
+  width:100%;
+  height:100%;
+  //border:1px solid blue;
+
+
+ .form{
+  width:600px;
+  height:100vh;
+  background:$pure-white;
+  border-radius: 0px 20px 20px 0px;
+  
+  padding: 48px 32px 32px 32px;
+  
+ }
+}
+
+

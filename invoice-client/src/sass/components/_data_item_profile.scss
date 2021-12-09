@@ -1,0 +1,120 @@
+
+.data_item_profile{
+   margin:1.5rem 0;
+   transition: all 0.2s ease-in-out;
+   
+
+    .heading-profile{
+        display:flex;
+        align-items: center;
+        height:60px;
+
+        .profile-image-container{
+            @extend %flex-center;
+            width:60px;
+            height:60px;
+            background:#E9E8E4;
+            border-radius: 20px;
+            position:relative;
+            overflow: hidden;
+        
+            .profile-image{
+                object-fit: cover;
+                object-position: center;
+                width: 60px;
+                height:60px;
+                position:absolute; 
+             }
+
+             .icon-user{
+                 color:$dark-white;
+                 font-size: 3rem;
+                
+             }
+        }
+        .heading-profile-content{
+            margin-left: 1rem;
+            height:100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            h3{
+              font-size: 1rem;
+              color:#202224;
+              font-weight: 600;
+            }
+            span{
+                font-size:12px;
+                color:#717579;
+                font-weight: 700;
+                
+            }
+        }
+    }
+
+    .content{
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:1.3rem 1rem;
+        border: 1px solid #F5F5F5;
+       box-sizing: border-box;
+       border-radius: 10px;
+       margin-top:1rem;
+       
+       h3{
+           font-size: 1rem;
+           color:$light-black;
+           
+       }
+       span{
+           text-transform: capitalize;
+           font-size: 1rem;
+           font-weight: 700;
+       }
+
+       #customer-id{
+           color:#717579;
+       }
+       @media(min-width: 767px)
+       {
+        border: none;
+        box-sizing: border-box;
+       }
+    }
+
+    @media(min-width: 767px)
+    {
+        display:grid;
+        grid-template-columns: repeat(3,1fr);
+        align-items: center;
+        padding:1rem;
+        border-bottom: 1px solid #E5E5E5;
+        margin:0;
+      
+       
+        .heading-profile{
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+        .content{
+            grid-column: 2/span 2;
+            grid-row: 1/2;
+            display:grid;
+            grid-template-columns: repeat(2,1fr);
+            margin:0;
+            h3{
+              justify-self: center;
+            }
+
+            span{
+                justify-self: end;
+            }
+        }
+        &:hover{
+            
+            background:#F8F8F8;
+            border-bottom:1px solid transparent;
+        }
+    }
+}

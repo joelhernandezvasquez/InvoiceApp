@@ -1,0 +1,44 @@
+@import '../base/typography';
+@import '../abstracts/placeholders';
+
+.emptyField{
+    color: hsl(0, 100%, 53%);
+    font-size: 14px;
+    font-family: $secondary-font;
+    font-weight: 400;
+
+    @media(min-width: 767px)
+    {
+        font-size: 1rem;
+    }
+    
+}
+
+.title{
+    font-size: 1.2rem;
+}
+.text-message{
+    font-size: 14px;
+} 
+
+.error-message-box{
+
+    background-color:#de350b;
+    @extend %alert-message;
+
+    & > *{
+        margin:5px 0;
+    }
+ 
+}
+
+.sucessfull-message-box{
+  
+    @extend %alert-message;
+    background-color: #008000;
+  
+   & > *{
+    margin:5px 0;
+}
+    
+}

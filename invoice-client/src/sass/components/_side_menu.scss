@@ -1,0 +1,124 @@
+
+
+.side-menu{
+    position: absolute;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+    top:70px;
+    width: 100%;
+    left:-100%;
+    transition: 100ms ease-in;
+    z-index: 10;
+    
+
+    .inner-menu{
+        background:$pure-white;
+        width: 240px;
+        margin-top: 0.5rem;
+        border-radius: 5px;
+        position:relative;
+        left:-100%;
+       
+      
+        transition:0.2s ease-in-out;
+        
+        span{
+          display: block;
+           padding:1.2rem 0 0 2.2rem;
+           font-size: 1.2rem;
+           color:#39368E;
+           font-weight: 500;
+           
+        }
+        .item{
+            display: block;
+            position:relative;
+            height:50px;
+            padding-left:1rem;
+            cursor: pointer;
+            margin:0.5rem 0;
+
+            .side-bar-item{
+              display:none;
+              position:absolute;
+              width:9px;
+              height:100%;
+              background:#39368E;
+              border-radius: 4px;
+              top:0px;
+              left:-5px;
+            }
+             .show.side-bar-item{
+                 display: block;
+             }
+
+            .inner-item{
+                width:190px;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                padding-left:0.8rem;
+                transition: all 0.1s ease-in-out;
+                
+                .link{
+                    color:$light-black;
+                    text-transform: capitalize;
+                    letter-spacing: 0.3px;
+                    font-size: 1rem;
+                    margin-left: 1rem; 
+                    font-family: $secondary-font;
+                    font-weight: 500;  
+                } 
+                i{
+                    font-size: 1.3rem;
+                }
+                
+                &:hover{
+                    background:#39368E;
+                    border-radius: 6px;
+                    :is(.link,i){
+                        color:$pure-white;
+                    }
+                    svg{
+                        fill:$pure-white;
+                    }
+                    
+                }
+            }
+            .activeItem.inner-item{
+                background:#39368E;
+                border-radius: 6px;
+                :is(.link,i){
+                    color:$pure-white;
+                }
+                svg{
+                    fill:$pure-white;
+                }
+            }
+            
+            }
+        }
+        .active.inner-menu
+        {
+          left: 0;
+        }
+       
+        .divider{
+            width:100%;
+             height:1px;
+             background:#E0E0E0;
+             margin:1rem 0 0 0;
+         }
+        
+      
+    }
+    .active.side-menu{
+        //display:block;
+        left: 0;
+    }
+
+    
+
+   
+
+   

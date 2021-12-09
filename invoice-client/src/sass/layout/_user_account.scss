@@ -1,0 +1,195 @@
+.user-account {
+  background: $dark-white;
+  min-height: 100vh;
+
+
+  &__wrapper {
+    padding-top: 8rem;
+    .wrapper-top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      & .profile-picture {
+        @extend %flex-center;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: $light-orange;
+        overflow: hidden;
+
+        .icon {
+          color: $pure-white;
+          font-size: 3rem;
+        }
+        img{
+          object-fit: cover;
+          object-position: center;
+          width: 100%;
+          
+        }
+      }
+
+      .profile-name{
+        color:$light-black;
+        font-size: 1.1rem;
+        margin-top:1rem;
+      }
+    }
+
+    .wrapper-content{
+     
+      .wrapper-form-user-details{
+        margin-top: 1rem;
+        .input-field {
+          display: flex;
+          flex-direction: column;
+          margin: 1rem 0;
+        
+        }
+        .btn-set-password{
+          background: none;
+          border: none;
+          outline: none;
+          background: $light-orange;
+          padding: 0.5rem;
+          font-size: 0.875rem;
+          color: $pure-white;
+          font-family: $secondary-font;
+          font-weight: 400;
+          width: 200px;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: all 0.2s ease-in-out;
+  
+          &:hover {
+            box-shadow: 0px 10px 60px rgba(254, 108, 77, 0.4);
+          }
+        }
+
+      }
+
+      .delete-account{
+        margin-top:2rem;
+
+        .delete-account-title{
+          color:$light-black;
+          font-size: 1.5rem;
+        }
+
+        .delete-account-text{
+          font-family: $secondary-font;
+          font-weight: 300;
+          color:$light-black;
+          font-size: 0.875rem;
+          line-height: 1.8;
+          margin-top:0.8rem;
+          padding-right:0.5rem;
+        }
+        .delete-account-btn-delete{
+          margin:1rem 0 2rem 0;
+          background: none;
+          border: none;
+          outline: none;
+          background: $pure-white;
+          padding: 0.5rem;
+          font-size: 0.875rem;
+          color: $light-orange;
+          font-family: $secondary-font;
+          font-weight: 400;
+          width: 200px;
+          border-radius: 5px;
+          cursor: pointer;
+          border:1px solid $light-orange;
+          transition: all 0.2s ease-in-out;
+
+          &:hover{
+            border:1px solid transparent;
+            background:#ff0000;
+            color:$pure-white;
+          }
+        }
+      }
+    }
+    @media (min-width: 767px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 80px 1fr;
+      padding-top: 2rem;
+    
+
+      .wrapper-top{
+        grid-column: 1/3;
+        grid-row: 1/2;
+        flex-direction: row;
+
+        .profile-picture{
+          width: 60px;
+        height: 60px;
+        margin-right: 0.5rem;
+
+        .icon {
+          font-size: 2rem;
+        }
+        }
+      }
+      .wrapper-content{
+        grid-column: 1/3;
+      grid-row: 2/3;
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      grid-gap: 20px;
+      margin-top: 2rem;;
+
+     .wrapper-form-user-details{
+      margin:0;
+
+      & div:nth-child(1)
+      {
+       
+        margin-top:0;
+      }
+      }
+      .delete-account{
+        grid-column: 2/3;
+      grid-row: 2/3
+      }
+      }
+    }
+  }
+
+  @media (min-width: 767px) {
+    .dashboard-header {
+      position: static;
+    }
+  }
+
+  @media(min-width:1280px)
+  {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 80px 1fr 1fr;
+
+    .container{
+      max-width: 100%;
+    }
+  
+    .side-menu-desktop{
+      grid-column: 1/2;
+      grid-row: 1/4;
+    }
+
+    .dashboard-header{
+      grid-column: 2/8;
+      grid-row: 1/2;
+    }
+    &__wrapper{
+      grid-column: 2/8;
+      grid-row: 2/3;
+      margin-left:5rem;
+    }
+    .input-field{
+      width:60%;
+    }
+  }
+}

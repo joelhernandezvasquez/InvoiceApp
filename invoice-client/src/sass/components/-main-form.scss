@@ -1,0 +1,165 @@
+.customer-form {
+  max-width: 716px;
+  //border:1px solid red;
+
+  & :nth-child(2) h4 {
+    margin-top: 24px;
+  }
+
+  @media (min-width: 1280px) {
+    max-width: 90%;
+  }
+}
+
+.main-heading {
+  color: $light-black;
+}
+
+.sub-heading {
+  color: $light-orange;
+  font-size: 1rem;
+  font-family: $secondary-font;
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+
+.main-form {
+  font-family: $secondary-font;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 767px) {
+    .form-input-container {
+      .input-text {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.form-input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  font-size: 0.875rem;
+  color: $light-black;
+  //border:1px solid red;
+  width: 100%;
+
+  & > * {
+    margin-top: 8px;
+  }
+
+  label {
+    text-transform: capitalize;
+  }
+  .input-text {
+    border: 1px solid hsl(0, 0%, 84%);
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    outline: 1px solid transparent;
+    width: 100%;
+
+    &:focus {
+      border: 1px solid $light-orange;
+    }
+  }
+}
+
+.billing-address-container {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+
+  .street-address {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+  .city {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .post-code {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  .country {
+    grid-column: 1/3;
+    grid-row: 3/4;
+  }
+
+  @media (min-width: 767px) {
+    grid-template-columns: repeat(3, 1fr);
+    .street-address {
+      grid-column: 1/4;
+    }
+    .city {
+      grid-column: 1/2;
+    }
+    .post-code {
+      grid-column: 2/3;
+    }
+    .country {
+      grid-column: 3/4;
+      grid-row: 2/3;
+    }
+  }
+}
+.submit-btn {
+  width: 100%;
+  margin: 24px 0;
+  border: none;
+  outline: 1px solid transparent;
+  background: $light-orange;
+  color: $pure-white;
+  border-radius: 24px;
+  padding: 16px 0;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background: hsl(11, 99%, 75%);
+  }
+
+  @media (min-width: 767px) {
+    width: 514px;
+    align-self: center;
+    margin-top: 48px;
+  }
+
+  @media (min-width: 1280px) {
+    width: 350px;
+    align-self: flex-start;
+  }
+}
+
+.status-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+
+  label {
+    font-size: 0.875rem;
+    color: $light-black;
+  }
+  .radio-button-group {
+    display: flex;
+    gap: 20px;
+
+    .radio-container {
+      display: flex;
+      align-items: center;
+
+      gap: 5px;
+      label {
+        font-weight: 500;
+      }
+    }
+  }
+}

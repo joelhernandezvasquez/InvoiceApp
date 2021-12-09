@@ -1,0 +1,73 @@
+@import '../abstracts/colors';
+
+%flex-spread{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+%flex-spread-around{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
+%flex-spread-vertical{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+%flex-column-spread-around{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+%flex-center{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+%flex-align-center{
+    display:flex;
+    align-items: center;
+}
+%flex-align-center-vertical{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+%subheading-text{
+    max-width: 60ch;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+%message-container{
+    width: 100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+    transition: all 0.3s ease-in-out;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+%alert-message{
+    width: 100%;
+    border-radius: 5px;
+    color:$pure-white;
+    padding:10px;
+    margin-bottom: 10px;
+}
+
+%delete-message{
+    width: 100%;
+    height:100%;
+    background:rgba(0,0,0,0.8);
+  
+}
+

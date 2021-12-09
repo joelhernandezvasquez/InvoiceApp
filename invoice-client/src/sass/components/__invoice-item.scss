@@ -1,0 +1,93 @@
+.invoice-item {
+  width: 100%;
+  background: $pure-white;
+  box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  cursor: pointer;
+  border:1px solid transparent;
+  transition:all 0.3s ease-in-out;
+
+  .invoice-item-id {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    font-size: 0.875rem;
+    color: $light-black;
+    font-weight: 700;
+  }
+  .invoice-item-date {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    font-size: 0.75rem;
+    color: $light-gray;
+    font-size: 0.875rem;
+    font-weight: 400;
+    margin: 1rem 0 0.5rem 0;
+  }
+  .invoice-item-amount {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    font-size: 1rem;
+    color: $light-black;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+  }
+  .invoice-item-customer {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    color: $light-gray;
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: -0.25px;
+    justify-self: flex-end;
+  }
+  .invoice-item-status {
+    grid-column: 2/3;
+    grid-row: 2/4;
+    justify-self: flex-end;
+    align-self: center;
+
+    .inner-status {
+      width: 104px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      mix-blend-mode: normal;
+      margin-top: 1.5rem;
+      border-radius: 6px;
+      .circle {
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
+        margin-right: 0.5rem;
+      }
+      span {
+        font-size: 0.875rem;
+        font-weight: 700;
+      }
+    }
+  }
+  @media(min-width: 767px)
+  {
+      display:flex;
+      align-items: center;
+      justify-content: space-between;
+     
+     .invoice-item-date{
+         margin:0;
+     }
+      .invoice-item-status{
+      .inner-status{
+         margin:0;
+       }
+       
+      }
+  }
+  &:hover{
+    border:1px solid $light-orange;
+  }
+}

@@ -1,0 +1,21 @@
+
+
+.text-field{
+  border:none;
+  padding:1rem 1.5rem;
+  border-radius:50px;
+  background:none;
+  border:1px solid $pure-white;
+  color:$pure-white;
+  outline: transparent;
+  transition: all 0.2s;
+  font-size: var(--fs-text);
+
+  
+  &:focus{
+    border:1px solid $light-orange;
+  }
+
+  
+
+}

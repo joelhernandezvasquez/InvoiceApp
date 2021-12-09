@@ -1,0 +1,58 @@
+
+@import '../abstracts/variables';
+@import '../abstracts/placeholders';
+
+.feature-card{
+    max-width: 374px;
+   @extend %flex-spread-vertical;
+    padding:2rem 0.5rem;
+  
+    .feature-heading{
+        margin:40px 0 10px 0 ;
+        font-size: var(--fs-h3);
+        color:$pure-white;
+    }
+   
+    .feature-card-link{
+        display:flex;
+        align-items: center;
+        margin-top: 1.5rem;
+        font-family: $secondary-font;
+        font-size:1.125rem;
+        color:$pure-white;
+        font-weight: 400;
+        transition: all 0.2s ease-in-out;
+        svg{
+            margin-left:0.6rem;
+            transition: all 0.2s ease-in-out;
+        }
+        &:hover{
+            color:$violet;
+            svg{
+               fill:$violet;
+            }
+        }
+        
+    }
+    @media(min-width: 767px)
+    {
+       .leading-text{
+            font-size:0.875rem;
+        }
+    }
+    @media(min-width: 1280px)
+    {
+      
+        .leading-text{
+            font-size: 1rem;
+        }
+    }
+   
+}
+.bgCard{
+    @media(min-width: 1400px)
+    {
+        background: rgba(#1f1e4e,0.2);
+        border-radius: 15px;
+    }  
+}

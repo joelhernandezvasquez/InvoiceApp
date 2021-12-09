@@ -1,0 +1,328 @@
+@import '../components//show_status';
+
+.customer-view-wrapper {
+  background: $dark-white;
+  min-height: 100%;
+  margin-bottom: -50px;
+
+  .customer-view-content {
+    padding-top: 104px;
+
+    .menu-actions {
+      margin: 2rem 0 1rem 0;
+      display: flex;
+      align-items: center;
+
+      .show-status {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      #menu-action-links {
+        display: none;
+      }
+
+      @media (min-width: 767px) {
+        justify-content: space-between;
+        max-width: 1200px;
+
+        .show-status {
+          width: 170px;
+        }
+
+        #menu-action-links {
+          display: block;
+
+          & > * {
+            margin: 0 8px;
+          }
+        }
+      }
+    }
+
+    .customer-input {
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 5px;
+      //margin:8px 0;
+      position: relative;
+
+      &::before {
+        content: ' ';
+        width: 100%;
+        height: 1px;
+        background: hsl(240, 4%, 95%);
+        position: absolute;
+        top: 0px;
+      }
+
+      @media (min-width: 767px) {
+        justify-content: flex-start;
+
+        &::before {
+          display: none;
+        }
+      }
+    }
+
+    .customer-info {
+      background: $pure-white;
+      box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+      border-radius: 8px;
+      padding: 1rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+
+      i {
+        display: none;
+      }
+
+      .customer-avatar {
+        width: 42px;
+        height: 42px;
+        background: $light-orange;
+        border-radius: 50%;
+        @extend %flex-center;
+        color: $pure-white;
+        letter-spacing: 1px;
+        font-family: $secondary-font;
+        align-self: center;
+
+        h2 {
+          font-size: 1rem;
+        }
+      }
+
+      .customer-name-container {
+        margin: 8px 0 24px 0;
+
+        .customer-name {
+          font-size: 1.1rem;
+          color: $light-black;
+          text-align: center;
+        }
+      }
+
+      .customer-id-container {
+       
+
+        .label-input {
+          font-size: 0.75rem;
+          word-break: break-word;
+          margin-left: 5px;
+          
+        }
+      }
+
+      .customer-address-container {
+        padding-top: 15px;
+        height: 100px;
+
+        .label-title,
+        .address-info {
+          align-self: flex-start;
+        }
+      }
+
+      @media (min-width: 767px) {
+        display: grid;
+        grid-template-columns: 60px 1fr 20px 1fr;
+        grid-template-rows: 40px 20px 30px;
+        grid-auto-rows: 40px;
+        max-width: 1200px;
+
+        :is(.customer-id-container, .customer-address-container, .customer-email-container, .customer-registerDate-container, .customer-amountDue-container) {
+          height: 100%;
+        }
+
+        i {
+          display: block;
+          color: $light-gray;
+          font-weight: 700;
+          font-size: 1.3rem;
+        }
+
+        .divider {
+          width: 100%;
+          height: 1px;
+          background: hsl(240, 4%, 95%);
+          grid-column: 1 / span 5;
+          grid-row: 3/4;
+          align-self: center;
+        }
+
+        .customer-avatar {
+          grid-column: 1/2;
+          grid-row: 1/3;
+          width: 48px;
+          height: 48px;
+          font-size: 1rem;
+        }
+
+        .customer-name-container {
+          grid-column: 2/3;
+          justify-self: start;
+        }
+
+        .customer-id-container {
+          grid-column: 2/3;
+          align-self: start;
+          padding:0;
+
+          .label-input {
+            font-size: 1rem;
+            word-break: break-word;
+            
+          }
+        }
+
+        .customer-address-container {
+          grid-column: 4/5;
+          grid-row: 1/2;
+          padding: 0;
+          margin-left: 32px;
+
+          .address-info {
+            width: 100%;
+            height: 100%;
+            flex-direction: row;
+            align-items: center;
+            //justify-content: center;
+
+            & > * {
+              margin-left: 10px;
+            }
+          }
+        }
+
+        .customer-contact-container {
+          grid-column: 4/5;
+          grid-row: 2/3;
+          height: 100%;
+          justify-self: start;
+          margin-left: 32px;
+          padding-left: 2px;
+
+          span {
+            margin-left: 10px;
+          }
+        }
+
+        .customer-email-container {
+          grid-column: 1 / 3;
+          grid-row: 4/5;
+
+          .label-input {
+            margin-left: 5px;
+          }
+
+          .label-title {
+            display: block;
+
+            &::after {
+              content: ':';
+              margin-left: 2px;
+            }
+          }
+        }
+
+        .customer-registerDate-container {
+          grid-column: 4/5;
+          grid-row: 4/5;
+          margin-left: 32px;
+          padding: 0;
+
+          .label-input {
+            margin-left: 5px;
+          }
+
+          .label-title {
+            display: block;
+
+            &::after {
+              content: ':';
+              margin-left: 2px;
+            }
+          }
+        }
+
+        .customer-amountDue-container {
+          grid-column: 4/5;
+          grid-row: 5/6;
+          margin-left: 32px;
+          padding: 0;
+
+          .label-title {
+            display: block;
+
+            &::after {
+              content: ':';
+              margin-left: 2px;
+            }
+          }
+        }
+
+        .label-title {
+          display: none;
+        }
+      }
+    }
+
+    footer {
+      background: $pure-white;
+      margin-top: 50px;
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      & > * {
+        margin: 0 16px;
+      }
+
+      @media (min-width: 767px) {
+        display: none;
+      }
+    }
+
+    @media (min-width: 767px) {
+      padding-top: 125px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    height: 100vh;
+
+    .dashboard-header {
+      grid-column: 2/8;
+      grid-row: 1/2;
+    }
+
+    .side-menu-desktop {
+      grid-column: 1/2;
+      grid-row: 1/5;
+    }
+
+    .customer-view-content {
+      grid-column: 2/8;
+      width: 100%;
+
+      padding: 0;
+
+      .label-title,
+      .label-input {
+        font-size: 1rem;
+      }
+    }
+
+    .container {
+      max-width: 95%;
+    }
+  }
+}

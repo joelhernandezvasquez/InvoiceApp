@@ -1,0 +1,33 @@
+
+
+.side-menu-setting{
+  
+ border-right:1px solid #E5E5E5;
+ //padding-left: 10px;
+ h2{
+     font-size: 1.2rem;
+     color: $light-black;
+     font-family: $secondary-font;
+     font-weight: 600;
+ }
+  .menu-items{
+     
+    li{
+        cursor: pointer;
+        margin:10px 5px;
+    }
+    .links{
+          text-decoration: none;
+          color:#717579;
+          font-family: $secondary-font;
+          transition: color 0.2s ease-in-out;
+        &:hover{
+            color:$light-black;
+            font-weight: 500;
+        }
+      }
+  }
+}
+.hidden.side-menu-setting{
+  visibility: hidden;
+}

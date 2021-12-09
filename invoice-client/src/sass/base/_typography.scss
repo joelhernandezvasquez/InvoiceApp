@@ -1,0 +1,21 @@
+
+@font-face {
+    font-family:'Gilroy';
+    src: url('../../assets/fonts/Gilroy-ExtraBold.otf');
+    font-style:normal;
+    font-weight: bold;
+  
+}
+
+@font-face {
+    font-family:'Gilroy';
+    src: url('../../assets/fonts/Gilroy-Light.otf');
+    font-style: normal;
+  
+}
+
+
+
+$primary-font:'Gilroy';
+$secondary-font:'Poppins', sans-serif;
+$fw-400:400;

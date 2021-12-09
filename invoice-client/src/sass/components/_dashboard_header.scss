@@ -1,0 +1,75 @@
+
+
+.dashboard-header{
+    background-color:$pure-white;
+    height: 70px;  
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index: 2;
+    border-bottom:1px solid #E8E8E8;
+
+    @media(min-width:767px)
+    {
+        height: 80px;
+    }
+
+    @media(min-width:1280px)
+     {
+         position: static;
+     }
+
+    .container{
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        height:100%; 
+    }
+     .test{
+        display:flex;
+         align-items: center;
+     }
+     #route-title{
+        color:$light-black;
+        font-size: 1.3rem;
+        font-family: $primary-font;
+        font-weight: 600;
+        margin-left: 2rem;
+        text-transform: capitalize;
+        
+        @media(min-width: 1280px)
+        {
+            margin:0;
+            font-size: 1.7rem;
+        }
+        
+      }
+
+      .invoice-btn-container{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        padding:0 0.5rem;
+        height:35px;
+        border-radius: 24px;
+        background-color: $light-orange;
+       
+        .inner-circle{
+            @extend %flex-center;
+            width: 24px;
+            height: 24px;
+            background:$pure-white;
+            border-radius: 50%;
+            margin-right: 5px;
+            .plus-icon{
+                width:50%;
+            }
+        }
+        span{
+            font-size: 12px;
+            color:$pure-white;
+            font-weight: bold;
+        }
+    }
+}

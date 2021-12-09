@@ -1,0 +1,181 @@
+
+@import '../abstracts/colors';
+@import '../base/typography';
+
+.main-nav-bar{
+    width:100%;
+    height:80px;
+    position: relative;
+    z-index:5;
+    transition:all 0.3s ease-in-out;
+  
+    .container{
+        @extend %flex-spread;
+    }
+
+    .menu-icon{
+        cursor: pointer;
+    }
+
+    .icon-close{
+       font-size: 1.8rem;
+       color:$pure-white;
+    }
+
+}
+
+.logo{
+    @media(min-width: 767px)
+    {
+        width:63px;
+        height:43px;
+    }
+}
+
+.main-nav-bar-open.main-nav-bar{
+    background:$dark-blue-bg;
+
+}
+
+.mobile-menu{
+   margin:var(--top-spacing) 0;
+   visibility:hidden;
+   opacity: 0;
+   transition:all 0.3s ease-in-out;
+  
+
+   .item{
+       margin:2rem 0;
+   }
+   .links{
+        color:$pure-white;
+        font-size:1.125rem;
+        font-weight: 400;
+         transition:0.2s ease-in-out;
+        &:hover{
+            color:$light-orange;
+        }
+    } 
+    .auth-btn-container{
+        border-top:1px solid rgba($pure-white,0.2);
+        padding:1rem 0;
+        @extend %flex-center;
+        & > *{
+            margin:0 1rem;
+        }
+    }
+
+    @media(min-width: 767px)
+    {
+     padding:0 2rem;
+     .item{
+        margin:3rem 0;
+    }
+    .links{
+        font-size: 1.2rem;
+    }
+    .auth-btn-container{
+        padding:1.5rem 0;
+        & > *{
+            margin:0 2rem;
+        }
+        .btn{
+            font-size:1.1rem;
+        }
+    }
+    }
+    
+
+}
+.open.mobile-menu{
+    visibility: visible;
+    opacity: 1;
+}
+
+.bar{
+    width:1.5rem;
+    height:1.88px;
+    background:$pure-white;
+    border-radius: 5px;
+}
+
+:is(.bar1,.bar3){
+   transition:all 0.2s cubic-bezier(0.04, 0.04, 0.12, 0.96) .1008s;
+}
+
+.bar2{
+    width:18px;
+    align-self: flex-end;
+}
+
+.close-bar.bar1{
+    position:absolute;
+    transform:rotate(-45deg);
+  }
+  
+  .close-bar.bar3{
+    position:absolute;
+    transform :rotate(45deg);
+    }
+
+.desktop-nav-bar{
+    @extend %flex-spread-around;
+    position: relative;
+    z-index: 10;
+    height:100px;
+
+    .desktop-menu-links{
+        display:flex;
+        align-items: center;
+
+        .desktop-links{
+            color:$pure-white;
+            font-size:var(--fs-text);
+            font-weight: bold;
+            text-transform: capitalize;
+           font-family:$primary-font;
+           margin:0 1.5rem;
+           transition:color 0.2s ease-in-out;
+           position: relative;
+           
+           &:hover{
+               color:$light-orange;
+              
+           }
+           .border-link{
+            width:0;
+            height:2px;
+            background:$light-orange;
+            position:absolute;
+            bottom:-10px;
+            left:0;
+            transition: all 0.2s ease-in-out;
+        }
+        .active.border-link{
+            width:100%;
+        } 
+           @media(min-width: 1400px)
+           {
+               font-size: 18px;
+               margin:0 2rem;
+           }
+           
+        }    
+  }
+  .authentication-btn-container{
+      display:flex;
+      align-items: center;
+  }
+  .btn{
+      margin:0 0.5rem;
+      @media(min-width: 1400px)
+      {
+        margin:0 1rem;
+      }
+  }
+}
+
+@keyframes animatedLink {
+    from{width:0%}
+    to{width: 100%;}  
+}

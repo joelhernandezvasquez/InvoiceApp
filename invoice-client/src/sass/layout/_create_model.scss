@@ -1,0 +1,52 @@
+@import '../components/-main-form.scss';
+@import '../components//confirmation-message';
+
+.create-wrapper {
+  background: $dark-white;
+  position: relative;
+
+  border-top: 1px solid blue;
+
+  .create-content {
+    padding-top: 104px;
+    @media (min-width: 767px) {
+      width: 90%;
+      border-radius: 20px;
+      background: white;
+      margin-top: 100px;
+
+      padding-top: 48px;
+    }
+
+    .main-heading-title {
+      margin: 24px 0;
+    }
+
+   
+  }
+
+  @media (min-width: 1280px) {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+
+    .dashboard-header {
+      grid-column: 2/8;
+      grid-row: 1/2;
+    }
+    .side-menu-desktop {
+      grid-column: 1/2;
+      grid-row: 1/3;
+    }
+    .create-content {
+      grid-column: 2/8;
+      grid-row: 1/3;
+      padding:48px 56px 0;
+      //width: 90%;
+    }
+
+    .container {
+      max-width: 95%;
+      
+    }
+  }
+}

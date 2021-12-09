@@ -1,0 +1,17 @@
+
+.logo-container{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ //border:1px solid red;
+
+ img{
+     width: 40px;
+     height: 40px;
+ }
+ span{
+     color:#231C3A;
+     font-weight: bold;
+     font-size: 1.2rem;
+ }
+}

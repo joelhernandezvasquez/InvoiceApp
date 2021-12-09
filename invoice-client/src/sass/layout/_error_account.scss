@@ -1,0 +1,31 @@
+@import '../abstracts/colors';
+@import '../abstracts/variables';
+@import '../utilities/container';
+
+
+.error-account-page{
+    background:$dark-blue-bg;
+    min-height: 100vh;
+    .container{
+        padding-top: 4rem;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    
+        & > *{
+            margin:1rem 0;
+        }
+    
+        h1{
+            color:$pure-white;
+        }
+        p{
+            font-size: 1rem;
+        }
+        #link{
+            color:$light-orange;
+            font-family: $secondary-font;
+        }
+    }
+}
+
